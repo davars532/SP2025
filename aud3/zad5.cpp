@@ -21,11 +21,11 @@ int main() {
     if ((a + b > c) && (a + c > b) && (b + c > a)) {
         cout << "Moze da se konstruira triagolnik" << endl;
 
-        if (a > b && a > c) {
+        if (a >= b && a >= c) {
             float temp = c;
             c = a;
             a = temp;
-        } else if (b > a && b > c) {
+        } else if (b >= a && b >= c) {
             float temp = c;
             c = b;
             b = temp;
