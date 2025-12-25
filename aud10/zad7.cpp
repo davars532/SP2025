@@ -16,6 +16,10 @@
 // 8 % 4 = 0
 //
 // NZD(20, 12) = 4
+// 20 / 12 = 1 + 8 ostat
+// 20 = 1 * 12 + 8
+
+// 12 = 1 * 8 + 4 ostat
 
 int nzd(int n, int m) {
     // n = 20 m = 12
@@ -29,20 +33,20 @@ using namespace std;
 
 int main() {
     int n;
-    // cin >> n;
-    // int a[100];
-    //
-    // for (int i = 0; i < n; i++) {
-    //     cin >> a[i];
-    // }
+    cin >> n;
+    int a[100];
 
-    // int nzd = a[0];
+    for (int i = 0; i < n; i++) {
+        cin >> a[i];
+    }
 
-    // for (int i = 0; i < n; i++) {
-    //     x
-    // }
+    int nzdNiza = a[0];
 
-    cout << "NZD: " << nzd(12, 20) << endl;
+    for (int i = 0; i < n; i++) {
+        nzdNiza = nzd(nzdNiza, a[i]);
+    }
+
+    cout << "NZD: " << nzdNiza << endl;
     return 0;
 
 }
